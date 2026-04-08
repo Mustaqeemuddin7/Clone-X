@@ -1,0 +1,10 @@
+.order-timeline{display:flex;align-items:flex-start;justify-content:space-between;padding:24px 0;position:relative}
+.timeline-step{display:flex;flex-direction:column;align-items:center;flex:1;position:relative;z-index:1}
+.timeline-dot{width:32px;height:32px;border-radius:50%;background:#DDD;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;transition:all .3s}
+.timeline-step-done .timeline-dot{background:var(--color-in-stock)}
+.timeline-step-current .timeline-dot{background:var(--color-amazon-orange);box-shadow:0 0 0 4px rgba(255,153,0,0.2);transform:scale(1.15)}
+.timeline-line{position:absolute;top:16px;left:calc(50% + 16px);right:calc(-50% + 16px);height:3px;background:#DDD;z-index:0}
+.timeline-line-done{background:var(--color-in-stock)}
+.timeline-label{font-size:12px;text-align:center;color:var(--text-secondary);font-weight:500}
+.timeline-step-done .timeline-label{color:var(--color-in-stock);font-weight:600}
+.timeline-step-current .timeline-label{color:var(--color-amazon-orange);font-weight:700}

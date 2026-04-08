@@ -1,0 +1,459 @@
+/* ============================================================
+   AMAZON CLONE - GLOBAL DESIGN SYSTEM
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============ CSS Custom Properties / Design Tokens ============ */
+:root {
+  /* Amazon Colors */
+  --color-primary-dark: #131921;
+  --color-secondary-dark: #232F3E;
+  --color-tertiary-dark: #37475A;
+  --color-amazon-orange: #FF9900;
+  --color-amazon-orange-hover: #E88800;
+  --color-button-yellow: #FFD814;
+  --color-button-yellow-hover: #F7CA00;
+  --color-button-yellow-active: #E2B200;
+  --color-buy-now-orange: #FFA41C;
+  --color-buy-now-orange-hover: #FA8900;
+  --color-price-red: #CC0C39;
+  --color-price-whole: #0F1111;
+  --color-in-stock: #007600;
+  --color-link-blue: #007185;
+  --color-link-blue-hover: #C7511F;
+  --color-star-gold: #FFA41C;
+  --color-fulfilled-blue: #232F3E;
+  --color-badge-prime: #00A4E4;
+
+  /* Backgrounds */
+  --bg-page-home: #E3ECF5;
+  --bg-page-listing: #EAEDED;
+  --bg-page-white: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-checkout: #F0F2F2;
+  --bg-footer: #232F3E;
+  --bg-footer-bottom: #131A22;
+  --bg-back-to-top: #37475A;
+
+  /* Text */
+  --text-primary: #0F1111;
+  --text-secondary: #565959;
+  --text-light: #FFFFFF;
+  --text-link: #007185;
+  --text-muted: #888;
+
+  /* Borders */
+  --border-color: #DDD;
+  --border-color-dark: #888;
+  --border-focus: #E77600;
+
+  /* Shadows */
+  --shadow-card: 0 2px 5px 0 rgba(213,217,217,.5);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+  --shadow-dropdown: 0 2px 4px rgba(0,0,0,0.13);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 20px;
+
+  /* Max Width */
+  --max-width: 1500px;
+
+  /* Header height */
+  --header-height: 60px;
+  --subnav-height: 39px;
+}
+
+/* ============ Reset ============ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-primary);
+  background: var(--bg-page-home);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-link);
+}
+
+a:hover {
+  color: var(--color-link-blue-hover);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ============ Utility Classes ============ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.font-bold { font-weight: 700; }
+.font-medium { font-weight: 500; }
+
+/* ============ Common Components ============ */
+
+/* Amazon Yellow Button */
+.btn-amazon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-button-yellow);
+  color: var(--text-primary);
+  border: 1px solid #C08B00;
+  border-radius: var(--radius-pill);
+  padding: 8px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.btn-amazon:hover {
+  background: var(--color-button-yellow-hover);
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.btn-amazon:active {
+  background: var(--color-button-yellow-active);
+}
+
+.btn-amazon-lg {
+  padding: 10px 36px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Orange Buy Now Button */
+.btn-buy-now {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-buy-now-orange);
+  color: var(--text-primary);
+  border: 1px solid #B7800A;
+  border-radius: var(--radius-pill);
+  padding: 8px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.btn-buy-now:hover {
+  background: var(--color-buy-now-orange-hover);
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.btn-buy-now-lg {
+  padding: 10px 36px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Outlined button */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--text-primary);
+  border: 1px solid #D5D9D9;
+  border-radius: var(--radius-pill);
+  padding: 8px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);
+  transition: background 0.15s;
+}
+
+.btn-outline:hover {
+  background: #F7FAFA;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+/* Link style button */
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--text-link);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+}
+
+.btn-link:hover {
+  color: var(--color-link-blue-hover);
+  text-decoration: underline;
+}
+
+/* Fulfilled badge */
+.badge-fulfilled {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: var(--color-fulfilled-blue);
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.badge-fulfilled::before {
+  content: 'a';
+  font-family: Arial;
+  font-weight: bold;
+  font-style: italic;
+  background: var(--color-amazon-orange);
+  color: var(--color-fulfilled-blue);
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* Limited time deal badge */
+.badge-deal {
+  background: #CC0C39;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Price display */
+.price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-symbol {
+  font-size: 13px;
+  position: relative;
+  top: -8px;
+}
+
+.price-whole {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-price-whole);
+}
+
+.price-decimal {
+  font-size: 13px;
+  position: relative;
+  top: -8px;
+}
+
+.price-mrp {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.price-mrp-value {
+  text-decoration: line-through;
+}
+
+.price-discount {
+  font-size: 16px;
+  color: var(--color-price-red);
+  font-weight: 400;
+}
+
+/* Form elements */
+.form-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(231, 118, 0, 0.15);
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: var(--space-lg) 0;
+}
+
+/* ============ Page-specific backgrounds ============ */
+.page-home {
+  background: var(--bg-page-home);
+}
+
+.page-listing {
+  background: var(--bg-page-listing);
+}
+
+.page-white {
+  background: var(--bg-page-white);
+}
+
+.page-checkout {
+  background: var(--bg-checkout);
+}
+
+/* ============ Placeholder image styles ============ */
+.placeholder-img {
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ============ Loading skeleton ============ */
+@keyframes skeletonPulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* ============ Scrollbar ============ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ============ Selection ============ */
+::selection {
+  background: var(--color-amazon-orange);
+  color: white;
+}

@@ -1,0 +1,5 @@
+.qty-selector{display:inline-flex;align-items:center;border:1px solid #D5D9D9;border-radius:8px;overflow:hidden;box-shadow:0 2px 5px rgba(213,217,217,.5)}
+.qty-btn{width:36px;height:34px;background:#F0F2F2;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .1s}
+.qty-btn:hover{background:#E3E6E6}
+.qty-btn:disabled{opacity:0.4;cursor:default}
+.qty-value{width:40px;text-align:center;font-size:15px;font-weight:500;border-left:1px solid #D5D9D9;border-right:1px solid #D5D9D9;height:34px;line-height:34px;background:#fff}

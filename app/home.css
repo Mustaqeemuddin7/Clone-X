@@ -1,0 +1,6 @@
+.deals-section{max-width:var(--max-width);margin:16px auto;padding:0 14px}
+.section-title{font-size:21px;font-weight:700;color:var(--text-primary);padding:16px 20px 12px;background:#fff}
+.deals-scroll{display:flex;overflow-x:auto;gap:0;background:#fff;padding:0 0 16px}
+.deals-scroll::-webkit-scrollbar{height:6px}
+.deals-scroll::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px}
+.deal-card-wrapper{min-width:220px;max-width:220px;flex-shrink:0}

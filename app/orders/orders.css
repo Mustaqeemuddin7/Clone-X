@@ -1,0 +1,11 @@
+.orders-container{max-width:920px;margin:0 auto;padding:24px 16px;min-height:70vh}
+.orders-container h1{font-size:26px;font-weight:400;margin-bottom:20px}
+.orders-empty{text-align:center;padding:40px;background:#fff;border-radius:8px;border:1px solid var(--border-color)}
+.orders-empty h3{font-size:18px;margin-bottom:8px}
+.order-card{background:#fff;border:1px solid var(--border-color);border-radius:8px;margin-bottom:16px;overflow:hidden}
+.order-card-header{display:flex;gap:32px;padding:14px 18px;background:#F0F2F2;border-bottom:1px solid var(--border-color);font-size:13px}
+.order-card-label{font-size:11px;color:var(--text-secondary);text-transform:uppercase}
+.order-card-id{margin-left:auto;font-size:12px;color:var(--text-secondary)}
+.order-card-body{padding:16px 18px}
+.order-card-status{font-size:16px;font-weight:700;margin-bottom:12px;text-transform:capitalize}
+.order-card-actions{display:flex;gap:10px}

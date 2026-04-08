@@ -1,0 +1,42 @@
+.pdp-breadcrumb{max-width:var(--max-width);margin:0 auto;padding:10px 16px;font-size:13px;color:var(--text-secondary)}
+.pdp-breadcrumb a{color:var(--text-link)}
+.pdp-container{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:380px 1fr 280px;gap:20px;padding:0 16px 40px}
+.pdp-images{display:flex;gap:12px}
+.pdp-thumbnails{display:flex;flex-direction:column;gap:8px}
+.pdp-thumb{width:48px;height:48px;border:2px solid transparent;border-radius:4px;overflow:hidden;cursor:pointer}
+.pdp-thumb-active,.pdp-thumb:hover{border-color:var(--color-amazon-orange)}
+.pdp-thumb img{width:100%;height:100%;object-fit:contain}
+.pdp-main-image{flex:1;display:flex;align-items:center;justify-content:center;max-height:500px}
+.pdp-main-image img{max-width:100%;max-height:450px;object-fit:contain}
+.pdp-details{padding:0 16px}
+.pdp-title{font-size:22px;font-weight:400;line-height:1.4;margin-bottom:4px}
+.pdp-brand{font-size:13px;margin-bottom:8px}
+.pdp-brand a{color:var(--text-link)}
+.pdp-rating{display:flex;align-items:center;gap:6px;margin-bottom:4px}
+.pdp-rating-num{font-size:14px;color:var(--text-link)}
+.pdp-bought{font-size:13px;color:var(--text-secondary);margin-bottom:4px}
+.pdp-divider{height:1px;background:var(--border-color);margin:12px 0}
+.pdp-price-section{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
+.pdp-discount{font-size:26px;color:var(--color-price-red)}
+.pdp-price-symbol{font-size:14px}
+.pdp-price-whole{font-size:28px}
+.pdp-mrp{font-size:13px;color:var(--text-secondary);margin-bottom:6px}
+.pdp-mrp-value{text-decoration:line-through}
+.pdp-tax{font-size:13px;color:var(--text-secondary);margin-bottom:2px}
+.pdp-emi{font-size:13px;margin-bottom:16px}
+.pdp-specs{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.pdp-specs th{text-align:left;padding:8px 12px;background:#F6F6F6;border:1px solid var(--border-color);font-weight:700;width:40%;color:var(--text-primary)}
+.pdp-specs td{padding:8px 12px;border:1px solid var(--border-color)}
+.pdp-about{margin-top:16px}
+.pdp-about h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.pdp-about ul{padding-left:20px}
+.pdp-about li{font-size:14px;margin-bottom:6px;line-height:1.5;list-style:disc}
+.pdp-buybox{border:1px solid var(--border-color);border-radius:8px;padding:16px;height:fit-content;position:sticky;top:70px}
+.pdp-buybox-price{display:flex;align-items:baseline;gap:4px;margin-bottom:8px}
+.pdp-delivery{font-size:13px;margin-bottom:8px}
+.pdp-stock{font-size:16px;font-weight:500;margin-bottom:8px}
+.pdp-shipped{font-size:12px;color:var(--text-secondary);margin-bottom:12px}
+.pdp-qty-row{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-size:14px}
+.pdp-qty-row select{padding:4px 8px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:#F0F2F2}
+.pdp-similar{max-width:var(--max-width);margin:0 auto;padding:0 16px 40px}
+.pdp-similar h2{font-size:21px;font-weight:700;margin-bottom:12px}

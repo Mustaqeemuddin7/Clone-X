@@ -1,0 +1,14 @@
+.order-track-container{max-width:var(--max-width);margin:0 auto;display:flex;gap:24px;padding:20px 16px;min-height:70vh}
+.order-track-main{flex:1}
+.order-track-main h1{font-size:24px;font-weight:400;margin-bottom:4px}
+.order-track-id{font-size:13px;color:var(--text-secondary);margin-bottom:20px}
+.order-track-timeline-card,.order-track-address,.order-track-items{background:#fff;border:1px solid var(--border-color);border-radius:8px;padding:20px;margin-bottom:16px}
+.order-track-timeline-card h3,.order-track-address h3,.order-track-items h3{font-size:16px;margin-bottom:12px}
+.order-track-address p{font-size:14px;line-height:1.6}
+.order-track-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #f0f0f0}
+.order-track-item-img img{width:70px;height:70px;object-fit:contain}
+.order-track-item-title{font-size:14px;color:var(--text-primary) !important;text-decoration:none !important}
+.order-track-item-title:hover{color:var(--color-link-blue-hover) !important;text-decoration:underline !important}
+.order-track-item-price{font-weight:700;margin-top:4px}
+.order-track-sidebar{width:300px;flex-shrink:0;background:#fff;border:1px solid var(--border-color);border-radius:8px;padding:16px;height:fit-content;position:sticky;top:70px}
+.order-track-sidebar h3{font-size:16px;font-weight:700;margin-bottom:8px}

@@ -1,0 +1,7 @@
+.checkout-header{background:var(--color-primary-dark);width:100%;border-bottom:4px solid var(--color-amazon-orange)}
+.checkout-header-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 24px;height:58px}
+.checkout-logo{color:#fff !important;font-size:24px;font-weight:700;font-style:italic;text-decoration:none !important}
+.checkout-logo span{font-size:16px}
+.checkout-title{color:#fff;font-size:24px;font-weight:400}
+.checkout-cart{color:#fff !important;font-size:14px;text-decoration:none !important}
+.checkout-cart:hover{text-decoration:underline !important}
